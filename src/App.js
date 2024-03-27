@@ -9,6 +9,7 @@ function App() {
       <Sai/>
       <ButtonComponent></ButtonComponent>
       <h3>Login feature</h3>
+      <h3>Setting screen added</h3>
 
       <CustomImage/>
 
