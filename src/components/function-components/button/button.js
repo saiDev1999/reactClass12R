@@ -8,8 +8,6 @@ function CustomButton(){
     return(
    
         <div>
-
-
        <button onClick={()=>{}} className="button" >{buttonText}</button>
        </div>
 
