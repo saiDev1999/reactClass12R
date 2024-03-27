@@ -10,6 +10,7 @@ function App() {
       <ButtonComponent></ButtonComponent>
       <h3>Login feature</h3>
       <h3>Setting screen added</h3>
+      <h1>task completed</h1>
 
       <CustomImage/>
 
