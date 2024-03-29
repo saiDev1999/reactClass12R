@@ -6,7 +6,7 @@ const ListItems =(sai)=>{
     return(
         <React.Fragment >
         <li>
-       {sai.name}
+       {sai.item.name}
         </li>
        
         </React.Fragment>

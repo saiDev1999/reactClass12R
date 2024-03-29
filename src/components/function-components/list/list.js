@@ -33,7 +33,7 @@ const ListComponent =()=>{
                 {
                     listItems.map((eachObject)=>{
                         return(
-                            <ListItems  name={eachObject.name}  />
+                            <ListItems  item={eachObject}  />
                         )
                     })
 
@@ -50,6 +50,9 @@ export default ListComponent
 // attribute: additional info to element 
 // prop : additional info to component , (sharing the data between the components)
 // prop is an object 
+// props we can write in 2 ways :(sharing the data between the components)
+// 1. general prop --> additional info to component
+// 2. children prop --> JSX or data encapsulate between the components 
 
 
 // tasks :

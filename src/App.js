@@ -3,17 +3,49 @@ import Sai from './components/function-components/button/button';
 import ButtonComponent from "./components/class-components/button"
 import CustomImage from './components/function-components/image/image';
 import ListComponent from './components/function-components/list/list';
+import TableComponent from './components/function-components/table/table';
+import CustomButton from './components/function-components/button/button';
+import Greeting from './components/function-components/greeting/greeting';
+import ListShow from './components/function-components/developerList/listShow';
 
 function App() {
-  return (
-    <div className="App">
-      <ListComponent/>
 
-    </div>
-  );
+  const isLoggedIn=false
+  // if(isLoggedIn){
+  //   return (
+  //     <h3>wellcome user</h3>
+  //   )
+  // }else{
+  //   return(
+  //     <h1>Please login</h1>
+  //   )
+  // }
+  return(
+
+ 
+    <>
+    <ListShow/>
+    </>
+  )
+  
 }
 
 export default App;
+
+
+const Text =({msg})=>{
+  return(
+    <h4>{msg}</h4>
+  )
+}
+
+
+// conditional rendering 
+// 2 WAYS :
+// 1. ternary operator 
+// 2. logical and operator (short circuit operator)
+
+
 
 // 1. default --> default export can be called with anyname
 // 2. named export
