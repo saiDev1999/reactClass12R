@@ -1,30 +1,21 @@
-import './App.css';
-import Sai from './components/function-components/button/button';
-import ButtonComponent from "./components/class-components/button"
-import CustomImage from './components/function-components/image/image';
-import ListComponent from './components/function-components/list/list';
-import TableComponent from './components/function-components/table/table';
-import CustomButton from './components/function-components/button/button';
-import Greeting from './components/function-components/greeting/greeting';
-import ListShow from './components/function-components/developerList/listShow';
+import FirstPage from "./components/function-components/styling/bootstrap/firstPage";
+import CustomText from "./components/function-components/styling/custom-text";
+import CustomCard from "./components/function-components/styling/reactBootstrap/card";
+import styles from "./components/function-components/styling/styles.module.css"
+
+
 
 function App() {
 
-  const isLoggedIn=false
-  // if(isLoggedIn){
-  //   return (
-  //     <h3>wellcome user</h3>
-  //   )
-  // }else{
-  //   return(
-  //     <h1>Please login</h1>
-  //   )
-  // }
+
   return(
 
  
     <>
-    <ListShow/>
+   <FirstPage/>
+
+
+ 
     </>
   )
   
@@ -32,87 +23,8 @@ function App() {
 
 export default App;
 
+// Tasks :
+// 1. repeat the class
+// 2. Create components corousel,navBar, Footer , Cards , Mdals
+// 3. Research on other react css frameworks (ant design, tailwing css , material UI, etc )
 
-const Text =({msg})=>{
-  return(
-    <h4>{msg}</h4>
-  )
-}
-
-
-// conditional rendering 
-// 2 WAYS :
-// 1. ternary operator 
-// 2. logical and operator (short circuit operator)
-
-
-
-// 1. default --> default export can be called with anyname
-// 2. named export
-
-// what is jsx : 
-
-
-// rules :
-// 1. every component must contain a single parent 
-// 2. jsx should write in a curly braces
-// 3. class must be replaced with className(class based components )
-// 4. every attributes must be camelCase 
-
-
-
-
-
-
-// Tasks:
-// 0. repeat the class
-// 1. create any 5 components in react (image,button,tables,list,fomrs)
-// 2. why react compared with other , reasons behind instagram to choose react 
-// 3. advantages and limitations of react
-
-
-
-// React team always suggesting to implement the functional based components for more simplicity and redability 
-
-// React 2013 :
-
-// 1. class components --> container layer
-// 2. functional components --> presentational layer 
-
-// 2018 react major update (16.8)(hooks)
-
-// 1. functional components --> container layer + presentational layer 
-
-
-// Features of react :
-// 1. component based approach 
-// 2. v-dom 
-// 3. jsx
-// 4. unidirectional data - flow
-
-// advg :
-// 1. huge community 
-// 2. wide library support 
-// 3. re-usability prinicple
-// 4. single page application 
-
-// limitations :
-// 1. react is just a library , it only focus on performing rich ui , it Doesn't focus on data fetching,routing
-// 2. Jsx syntax complexity
-
-
-// layers in web site :
-// 1. presentational layer -> only UI
-// 2. container layer -> functional layer 
-
-
-// es 6 features :
-// 1. let const 
-// 2. arrow functions
-// 3. destrcuturing
-// 4. spread operator and rest operators
-// 6. oops (class)
-// 7. promises / async and await 
-// 8. arry methods (map,filter,reduce,find)
-// 9. string templates 
-// 10. ternany opearator etc
