@@ -24,18 +24,12 @@ function App() {
 
 export default App;
  
-// container layer or functional layer :
-// 2013-2018 class based for contaier layer 
-// 2018+ functional 
-// props :props are immutable (only read)
-// state  : state is an object , which holds the data or information to the particular component
-// state is private
-// state is mutable (we can change over the time) 
-// we can read and write over the time 
+ 
 
-// state creation in class based components 
-// 1. object way of creation 
-// 2. constructor 
+// 1. repeat the class (CRUD OPERATIONS ON STATE USING SETSTATE)
+// 2. Perform crud on array of objects 
+// 3. Style the Content using external
+// 4. take few examples on Map, forEach, filter, reduce(take array of objects)
 
 
 
