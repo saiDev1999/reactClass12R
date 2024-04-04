@@ -10,7 +10,7 @@ class Counter extends Component{
    }
 
    incrementCount = (event)=>{
-    console.log(event)
+
     this.setState(
         {
             count:this.state.count+event
@@ -18,11 +18,15 @@ class Counter extends Component{
     )
    }
    decrementCount = ()=>{
-    this.setState(
-        {
-            count:this.state.count-1
-        }
-    )
+    if(this.state.count>0){
+        this.setState(
+            {
+                count:this.state.count-1
+            }
+        )
+
+    }
+  
    }
    resetCount = ()=>{
     this.setState(
