@@ -38,6 +38,18 @@
 
 // when ever component or elements updated in the dom 
 
+// 1. render
+// 2. getderivedStateFromProps
+// 3. shouldComponentUpdate , this method denotes whether the component needs to update or not (returns boolean value) by default it is true
+// 4. componentDidUpdate , to perform side effects in the updating phase we use componentDidUpdate 
+// whenver component state or props changed this method invokes
+// 5. getSnapShotBeforeUpdate
+
 // 3. Unmounting phase 
 
 // when ever component or elements removed from the dom 
+// 1. component will unmount
+
+// this method cleans up the data , initializes the state and props
+
+// for preventing memory leaks in the app we use this method

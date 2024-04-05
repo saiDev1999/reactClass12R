@@ -5,11 +5,33 @@ import CustomSpinner from "../../../function-components/spinner/spinner";
 
 class ProductListing extends Component {
 
-    state={
-        products:[]
+    // state={
+    //     products:[]
+    // }
+    constructor(){
+      console.log("constructor")
+      super()
+      this.state={
+        products:[],
+        favouriteColor:"green"
+
+      }
     }
 
+    static getDerivedStateFromProps(props, state) {
+      console.log("getDerivedStateFromProps")
+
+      return {favouriteColor:props.favcol}
+       
+    }
+
+
     componentDidMount(){
+
+      document.title="hello world"
+
+      //component did mount executes only once in a life cycle 
+      console.log("componentDidMount")
 
         this.fetchData()
 
@@ -37,10 +59,11 @@ class ProductListing extends Component {
     }
 
   render() {
-    console.log(this.state.products,"log from render")
+    // console.log(this.state.products,"log from render")
+    console.log("render")
     return (
       <>
-        <h4>Product Listing</h4>
+        <h4 style={{color:this.state.favouriteColor}}  >Product Listing</h4>
 
         {
             this.state.products.length>0
@@ -48,9 +71,9 @@ class ProductListing extends Component {
             <div className="productList" >
             {
                 this.state.products.map(eachObject=>{
-                    const {description,title,thumbnail,price}=eachObject
+                    const {description,title,thumbnail,price,id}=eachObject
                     return(
-                        <div className="cards" >
+                        <div className="cards"  key={id} >
                         <h3>{title}</h3>
                         <h4>{description}</h4>
                         <img src={thumbnail} alt={title} width={200} height={200} />
