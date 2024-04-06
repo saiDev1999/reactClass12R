@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import axios from "axios"
 import "./index.css"
 import CustomSpinner from "../../../function-components/spinner/spinner";
@@ -37,6 +37,15 @@ class ProductListing extends Component {
 
     }
 
+    lowToHigh=()=>{
+      const result=this.state.products.sort((a,b)=>a.price-b.price)
+
+       this.setState({
+        products:result
+       })
+      
+    }
+
     // fetchData =()=>{
     //     fetch("https://dummyjson.com/products")
     //     .then(response=>response.json())
@@ -64,21 +73,26 @@ class ProductListing extends Component {
     return (
       <>
         <h4 style={{color:this.state.favouriteColor}}  >Product Listing</h4>
+        <button onClick={this.lowToHigh} >Filter by low to high</button>
 
         {
             this.state.products.length>0
             ?
             <div className="productList" >
+             
             {
+      
                 this.state.products.map(eachObject=>{
                     const {description,title,thumbnail,price,id}=eachObject
                     return(
-                        <div className="cards"  key={id} >
+                      <React.Fragment key={id}>
+                        <div className="cards"  >
                         <h3>{title}</h3>
                         <h4>{description}</h4>
                         <img src={thumbnail} alt={title} width={200} height={200} />
                         <h5 style={{color:"red"}} >₹{price}</h5>
                         </div>
+                        </React.Fragment>
                     )
                 })
             }

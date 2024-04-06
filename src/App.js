@@ -2,6 +2,7 @@ import ButtonComponent from "./components/class-components/button";
 import ProductListing from "./components/class-components/lifeCycle/mounting/productListing";
 import Unmount from "./components/class-components/lifeCycle/unmounting/unMount";
 import UpdatingCounter from "./components/class-components/lifeCycle/updating/counter";
+import ParentCompo from "./components/class-components/pureComponent/parent";
 import FirstPage from "./components/function-components/styling/bootstrap/firstPage";
 import CustomText from "./components/function-components/styling/custom-text";
 import CustomCard from "./components/function-components/styling/reactBootstrap/card";
@@ -14,7 +15,9 @@ function App() {
     <>
       {/* <ProductListing  favcol={"red"}  /> */}
       {/* <UpdatingCounter/> */}
-      <Unmount/>
+      {/* <Unmount/> */}
+      {/* <ParentCompo color={"red"} /> */}
+      <ProductListing/>
     </>
   )
 
