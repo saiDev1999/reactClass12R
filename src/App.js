@@ -1,3 +1,4 @@
+import UncontrolledInput from "./components/function-components/forms/uncontrolled";
 import UseStateExample1 from "./components/function-components/hooks/useState/useState-Ex1";
 import UseStateEx2 from "./components/function-components/hooks/useState/useState-Ex2";
 import UseStateEx3 from "./components/function-components/hooks/useState/useState-Ex3";
@@ -8,9 +9,7 @@ function App() {
   return (
     <>
       
- {/* <UseStateExample1/> */}
- {/* <UseStateEx2/> */}
- <UseStateEx3/>
+  <UncontrolledInput/>
     </>
   )
 
