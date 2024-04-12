@@ -1,3 +1,5 @@
+import ControlledComponents from "./components/function-components/forms/controlled";
+import ControlledComponents2 from "./components/function-components/forms/controlled2";
 import UncontrolledInput from "./components/function-components/forms/uncontrolled";
 import UseStateExample1 from "./components/function-components/hooks/useState/useState-Ex1";
 import UseStateEx2 from "./components/function-components/hooks/useState/useState-Ex2";
@@ -9,7 +11,8 @@ function App() {
   return (
     <>
       
-  <UncontrolledInput/>
+  {/* <UncontrolledInput/> */}
+  <ControlledComponents2/>
     </>
   )
 

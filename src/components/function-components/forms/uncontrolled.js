@@ -8,7 +8,7 @@ const UncontrolledInput = ()=>{
     const userNameRef =useRef("")
     const passwordRef=useRef("")
     const [errorVisible,setErrorVisible]=useState(false)
-    const [fruits,setFruits]=useState([])
+    const [data,setData]=useState([])
 
     const handleSubmit=(event)=>{
         event.preventDefault()
@@ -17,18 +17,26 @@ const UncontrolledInput = ()=>{
         const userInput=userNameRef.current.value
         const passwordInput=passwordRef.current.value
 
-        if(userInput.length<5 && passwordInput.length<5){
-            // errorVisible="hello"
-            setErrorVisible(true)
-            // alert("User name and password must be greter than 5")
-        }else{
-            const newObj={
-                username:userInput,
-                password:passwordInput
-            }
-            setErrorVisible(false)
-            console.log("submit form",newObj)
+        const dummyObject={
+          username:userInput,
+          password:passwordInput
         }
+
+        const newData=[...data,dummyObject]
+        setData(newData)
+
+        // if(userInput.length<5 && passwordInput.length<5){
+        //     // errorVisible="hello"
+        //     setErrorVisible(true)
+        //     // alert("User name and password must be greter than 5")
+        // }else{
+        //     const newObj={
+        //         username:userInput,
+        //         password:passwordInput
+        //     }
+        //     setErrorVisible(false)
+        //     console.log("submit form",newObj)
+        // }
 
 
     }
@@ -36,6 +44,7 @@ const UncontrolledInput = ()=>{
     return(
         <div>
             <form onSubmit={handleSubmit} >
+              {data.reverse().map(eachObject=><h3>{eachObject.username}</h3>)}
   <div className="mb-3 mt-3">
     <label htmlFor="email" className="form-label">
       Email:
