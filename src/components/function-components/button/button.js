@@ -3,12 +3,15 @@
 
 
 
-function CustomButton(){
+function CustomButton({children}){
+ 
     const buttonText="Login"
+
     return(
    
         <div>
-       <button onClick={()=>{}} className="button" >{buttonText}</button>
+            {children}
+       {/* <button onClick={()=>{}} className="button" >{children}</button> */}
        </div>
 
     )
